@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sync() {
+  bucket=${1}
+  aws s3 sync ./ s3://${bucket}/ --exclude "*" --include "*.html" --include "*.css"
+}
+
+sync christopherbantle
