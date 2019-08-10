@@ -2,7 +2,7 @@
 
 sync() {
   bucket=${1}
-  aws s3 sync ./ s3://${bucket}/ --exclude "*" --include "*.html" --include "*.css"
+  aws s3 sync ./ s3://${bucket}/ --exclude "*" --include "*.html" --include "*.css" --include "sitemap.xml"
 }
 
 sync christopherbantle
